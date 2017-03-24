@@ -10,16 +10,16 @@ namespace app\models;
 use Codeception\Util\Autoload;
 use yii\db\ActiveRecord;
 
-class Auto extends ActiveRecord
+class Type extends ActiveRecord
 {
 
     public static function tableName()
     {
-        return 'auto';
+        return 'type';
     }
 
-    public function getType()
+    public function getAutos()
     {
-        return $this->hasOne(Type::className(), ['id' => 'type_id']);
+        return $this->hasMany(Auto::className(), ['type_id' => 'id']);
     }
 }

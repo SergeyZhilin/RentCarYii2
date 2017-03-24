@@ -75,17 +75,20 @@ $this->title = 'Rent Car for A-Level';
             <div class="col-sm-3">
                 <div class="left-sidebar">
                     <h2>Category</h2>
+
+                    <?=  \app\components\MenuWidget::widget(['tpl' => 'select']) ?>
+
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#retro">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Sportswear
+                                        Retro
                                     </a>
                                 </h4>
                             </div>
-                            <div id="sportswear" class="panel-collapse collapse">
+                            <div id="retro" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
                                         <li><a href="#">Nike </a></li>
@@ -100,13 +103,13 @@ $this->title = 'Rent Car for A-Level';
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#mens">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#automobiles">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Mens
+                                        Automobiles
                                     </a>
                                 </h4>
                             </div>
-                            <div id="mens" class="panel-collapse collapse">
+                            <div id="automobiles" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
                                         <li><a href="#">Fendi</a></li>
@@ -127,13 +130,13 @@ $this->title = 'Rent Car for A-Level';
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordian" href="#womens">
+                                    <a data-toggle="collapse" data-parent="#accordian" href="#motorcycle">
                                         <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                        Womens
+                                        Motorcycles
                                     </a>
                                 </h4>
                             </div>
-                            <div id="womens" class="panel-collapse collapse">
+                            <div id="motorcycle" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul>
                                         <li><a href="#">Fendi</a></li>
