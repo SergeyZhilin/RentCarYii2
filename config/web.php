@@ -45,6 +45,7 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'type/<id:\d+>' => 'type/view'
             ],
         ],
     ],
