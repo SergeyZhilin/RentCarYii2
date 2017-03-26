@@ -19,4 +19,11 @@ class TypeController extends AppController
         return $this->render('index', compact('hits'));
     }
 
+    public function actionView($id)
+    {
+        $id = Yii::$app->request->get('id');
+        $autos = Auto::find()->where(['type_id' => $id])->all();
+        return $this->render('view', compact('autos'));
+    }
+
 }

@@ -125,13 +125,6 @@ $this->title = 'Rent Car for A-Level';
                                     <p><?= $hit->name?></p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
-<!--                                <div class="product-overlay">-->
-<!--                                    <div class="overlay-content">-->
-<!--                                        <h2>$--><?//= $hit->price?><!--</h2>-->
-<!--                                        <p>--><?//= $hit->name?><!--</p>-->
-<!--                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>-->
-<!--                                    </div>-->
-<!--                                </div>-->
                                 <?php if ($hit->new): ?>
                                     <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>
                                 <?php endif; ?>
