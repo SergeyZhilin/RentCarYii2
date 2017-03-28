@@ -61,7 +61,7 @@ use yii\helpers\Html;
                                 <div class="productinfo text-center">
                                     <?= Html::img("@web/images/autos/{$auto->img}", ['alt' => $auto->name])?>
                                     <h2>$<?= $auto->price?></h2>
-                                    <p><?= $auto->name?></p>
+                                    <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $auto->id])?>"><?= $auto->name?></a></p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <?php if ($auto->new): ?>
@@ -89,11 +89,6 @@ use yii\helpers\Html;
                         <h2>Здесь товаров пока нет....</h2>
                     <?php endif; ?>
 
-<!--                    <ul class="pagination">-->
-<!--                        <li class="active"><a href="">1</a></li>-->
-<!--                        <li><a href="">2</a></li>-->
-<!--                        <li><a href="">3</a></li>-->
-<!--                        <li><a href="">&raquo;</a></li>-->
                     </ul>
                 </div><!--features_items-->
             </div>

@@ -121,7 +121,7 @@ use yii\helpers\Html;
                                 <div class="productinfo text-center">
                                     <?= Html::img("@web/images/autos/{$hit->img}", ['alt' => $hit->name])?>
                                     <h2>$<?= $hit->price?></h2>
-                                    <p><?= $hit->name?></p>
+                                    <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $hit->id])?>"><?= $hit->name?></a></p>
                                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                                 </div>
                                 <?php if ($hit->new): ?>
