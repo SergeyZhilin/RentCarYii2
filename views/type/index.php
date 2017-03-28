@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'Rent Car for A-Level';
 ?>
 
 <section id="slider"><!--slider-->

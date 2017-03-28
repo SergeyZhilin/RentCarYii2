@@ -2,12 +2,11 @@
 
 /* @var $this yii\web\View */
 use yii\helpers\Html;
-$this->title = 'Rent Car for A-Level';
 ?>
 
 <section id="advertisement">
     <div class="container">
-        <img src="/images/shop/advertisement.jpg" alt="" />
+<!--        <img src="/images/shop/advertisement.jpg" alt="" />-->
     </div>
 </section>
 
@@ -53,7 +52,7 @@ $this->title = 'Rent Car for A-Level';
 
             <div class="col-sm-9 padding-right">
                 <div class="features_items"><!--features_items-->
-                    <h2 class="title text-center">Features Items</h2>
+                    <h2 class="title text-center"><?= $type->name ?></h2>
                     <?php if (!empty($autos)): ?>
                         <?php foreach ($autos as $auto): ?>
                     <div class="col-sm-4">
@@ -81,15 +80,20 @@ $this->title = 'Rent Car for A-Level';
                         </div>
                     </div>
                             <?php endforeach; ?>
+
+                        <?php echo \yii\widgets\LinkPager::widget([
+                            'pagination' => $pages,
+                        ]); ?>
+
                         <?php else :?>
                         <h2>Здесь товаров пока нет....</h2>
                     <?php endif; ?>
 
-                    <ul class="pagination">
-                        <li class="active"><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">&raquo;</a></li>
+<!--                    <ul class="pagination">-->
+<!--                        <li class="active"><a href="">1</a></li>-->
+<!--                        <li><a href="">2</a></li>-->
+<!--                        <li><a href="">3</a></li>-->
+<!--                        <li><a href="">&raquo;</a></li>-->
                     </ul>
                 </div><!--features_items-->
             </div>
