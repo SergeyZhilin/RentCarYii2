@@ -11,6 +11,7 @@ class AutoController extends AppController
     {
         $id = Yii::$app->request->get('id');
         $auto = Auto::findOne($id);
+        $this->setMeta('Rent Car for A-Level');
         return $this->render('view', compact('auto'));
     }
 
