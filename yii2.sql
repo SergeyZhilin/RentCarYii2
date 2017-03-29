@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 28 2017 г., 17:32
+-- Время создания: Мар 29 2017 г., 12:37
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.6.23
 
@@ -52,8 +52,8 @@ INSERT INTO `auto` (`id`, `type_id`, `name`, `content`, `price`, `keywords`, `de
 (4, 0, 'product4', '444444444444444', 9, NULL, NULL, 'auto4.jpg', '1', '0', '1', '0'),
 (5, 0, 'product5', '55555555555555555', 2, NULL, NULL, 'auto5.jpg', '1', '0', '0', '0'),
 (6, 0, 'Cuda Concept (1/18 Highway 61)', '666666666666', 6, NULL, NULL, 'auto6.jpg', '1', '0', '0', '0'),
-(7, 4, 'Civic Type R', 'chto to', 7.77, NULL, NULL, 'CivicTypeR.jpg', '0', '1', '0', '0'),
-(8, 6, 'Swift', 'Swift', 2.34, NULL, NULL, 'Swift.jpg', '0', '0', '0', '0');
+(7, 4, 'Honda Civic Type R', 'chto to', 7.77, 'Основные ключи', 'Описание машины', 'CivicTypeR.jpg', '0', '1', '0', '0'),
+(8, 6, 'Suzuki Swift', 'Swift', 2.34, NULL, NULL, 'Swift.jpg', '0', '0', '0', '0');
 
 -- --------------------------------------------------------
 

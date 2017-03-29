@@ -120,7 +120,7 @@ ltAppAsset::register($this);
                     </div>
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="<?= \yii\helpers\Url::home()?>" class="">Home</a></li>
                             <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
                                     <li><a href="shop.html">Products</a></li>
@@ -143,7 +143,9 @@ ltAppAsset::register($this);
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Search"/>
+                        <form method="get" action="<?= \yii\helpers\Url::to(['type/search'])?>">
+                            <input type="text" placeholder="Search" name="q">
+                        </form>
                     </div>
                 </div>
             </div>

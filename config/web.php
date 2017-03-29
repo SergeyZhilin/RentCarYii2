@@ -48,7 +48,8 @@ $config = [
             'rules' => [
                 'type/<id:\d+>/page/<page:\d+>' => 'type/view',
                 'type/<id:\d+>' => 'type/view',
-                'auto/<id:\d+>' => 'auto/view'
+                'auto/<id:\d+>' => 'auto/view',
+                'search' => 'type/search',
             ],
         ],
     ],

@@ -11,6 +11,7 @@ use app\models\Type;
 use app\models\Auto;
 use Yii;
 use yii\data\Pagination;
+use yii\web\HttpException;
 
 class TypeController extends AppController
 {
@@ -23,15 +24,32 @@ class TypeController extends AppController
 
     public function actionView($id)
     {
-        $id = Yii::$app->request->get('id');
-//        $autos = Auto::find()->where(['type_id' => $id])->all();
+
+        $type = Type::findOne($id);
+            if (empty($type))
+                throw new \yii\web\HttpException(404, 'Такого товара не существует, досвидули!');
+
         $query = Auto::find()->where(['type_id' => $id]);
         $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 6, 'forcePageParam' => false,
                                  'pageSizeParam' => false]);
         $autos = $query->offset($pages->offset)->limit($pages->limit)->all();
-        $type = Type::findOne($id);
-        $this->setMeta('Rent Car for A-Level | ' . $type->name, $type->keywords, $type->description);
+
+        $this->setMeta('Rent Car | ' . $type->name, $type->keywords, $type->description);
         return $this->render('view', compact('autos', 'pages', 'type'));
     }
 
+    public function actionSearch()
+    {
+
+        $q = trim(Yii::$app->request->get('q'));
+        $this->setMeta('Rent Car | ' . $q);
+            if (!$q)
+                return $this->render('search');
+        $query = Auto::find()->where(['like', 'name', $q]);
+        $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 6, 'forcePageParam' => false,
+            'pageSizeParam' => false]);
+        $autos = $query->offset($pages->offset)->limit($pages->limit)->all();
+        return $this->render('search', compact('autos', 'pages', 'q'));
+
+    }
 }
