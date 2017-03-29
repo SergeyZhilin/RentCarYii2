@@ -123,7 +123,7 @@ use yii\helpers\Html;
                                     <h2>$<?= $hit->price?></h2>
                                     <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $hit->id])?>"><?= $hit->name?></a></p>
                                     <a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $hit->id]) ?>"
-                                       data-id = "<?= $hit->id?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Rent It</a>
+                                       data-id = "<?= $hit->id?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Арендовать на день</a>
                                 </div>
                                 <?php if ($hit->new): ?>
                                     <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>

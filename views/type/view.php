@@ -62,7 +62,7 @@ use yii\helpers\Html;
                                     <?= Html::img("@web/images/autos/{$auto->img}", ['alt' => $auto->name])?>
                                     <h2>$<?= $auto->price?></h2>
                                     <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $auto->id])?>"><?= $auto->name?></a></p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Арендовать на день</a>
                                 </div>
                                 <?php if ($auto->new): ?>
                                     <?= Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>

@@ -5,7 +5,7 @@
             <tr>
                 <th>Фото</th>
                 <th>Наименование</th>
-                <th>Кол-во</th>
+                <th>Кол-во дней</th>
                 <th>Цена</th>
                 <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
             </tr>

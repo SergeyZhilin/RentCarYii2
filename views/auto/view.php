@@ -71,7 +71,7 @@ use yii\helpers\Html;
 									<input type="text" value="1" />
 									<button type="button" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Add to cart
+										Арендовать
 									</button>
 								</span>
                             <p><b>Availability:</b> In Rent</p>
@@ -102,7 +102,7 @@ use yii\helpers\Html;
                                                 <h2>$<?= $hit->price?></h2>
                                                 <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $hit->id])?>">
                                                 <?= $hit->name?></a></p>
-                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                                <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Арендовать на день</button>
                                             </div>
                                         </div>
                                     </div>
