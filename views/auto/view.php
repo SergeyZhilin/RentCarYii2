@@ -67,12 +67,12 @@ use yii\helpers\Html;
                             <img src="/images/product-details/rating.png" alt="" />
                             <span>
 									<span>US $<?= $auto->price ?></span>
-									<label>Quantity:</label>
-									<input type="text" value="1" />
-									<button type="button" class="btn btn-fefault cart">
+									<label>Кол-во дней:</label>
+									<input type="text" value="1" id="qty">
+									<a href="<?= \yii\helpers\Url::to(['cart/add', 'id' => $auto->id])?>" data-id="<?= $auto->id ?>" class="btn btn-fefault add-to-cart cart">
 										<i class="fa fa-shopping-cart"></i>
-										Арендовать
-									</button>
+										Add
+									</a>
 								</span>
                             <p><b>Availability:</b> In Rent</p>
                             <p><b>Condition:</b> New</p>
