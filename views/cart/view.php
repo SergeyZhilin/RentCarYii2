@@ -28,7 +28,6 @@ use yii\widgets\ActiveForm;
                     <th>Кол-во дней</th>
                     <th>Цена</th>
                     <th>Сумма</th>
-                    <th><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -39,13 +38,8 @@ use yii\widgets\ActiveForm;
                         <td><?= $item['qty']?></td>
                         <td><?= $item['price']?></td>
                         <td><?= $item['qty'] * $item['price']?></td>
-                        <td><span data-id="<?= $id?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                     </tr>
                 <?php endforeach?>
-<!--                <tr>-->
-<!--                    <td colspan="5">Итого: </td>-->
-<!--                    <td>--><?//= $session['cart.qty']?><!--</td>-->
-<!--                </tr>-->
                 <tr>
                     <td colspan="4">Общая сумма: </td>
                     <td><?= $session['cart.sum']?> $</td>
