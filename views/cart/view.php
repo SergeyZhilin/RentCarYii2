@@ -5,6 +5,19 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="container">
+    <?php if( Yii::$app->session->hasFlash('success') ): ?>
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?php echo Yii::$app->session->getFlash('success'); ?>
+        </div>
+    <?php endif;?>
+
+    <?php if( Yii::$app->session->hasFlash('error') ): ?>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?php echo Yii::$app->session->getFlash('error'); ?>
+        </div>
+    <?php endif;?>
     <?php if(!empty($session['cart'])): ?>
         <div class="table-responsive">
             <table class="table table-hover table-striped">
@@ -29,13 +42,13 @@ use yii\widgets\ActiveForm;
                         <td><span data-id="<?= $id?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
                     </tr>
                 <?php endforeach?>
+<!--                <tr>-->
+<!--                    <td colspan="5">Итого: </td>-->
+<!--                    <td>--><?//= $session['cart.qty']?><!--</td>-->
+<!--                </tr>-->
                 <tr>
-                    <td colspan="4">Итого: </td>
-                    <td><?= $session['cart.qty']?></td>
-                </tr>
-                <tr>
-                    <td colspan="4">На сумму: </td>
-                    <td><?= $session['cart.sum']?></td>
+                    <td colspan="4">Общая сумма: </td>
+                    <td><?= $session['cart.sum']?> $</td>
                 </tr>
                 </tbody>
             </table>
