@@ -97,10 +97,10 @@ ltAppAsset::register($this);
                                 <?php if(!Yii::$app->user->isGuest): ?>
                                     <li><a href="<?= \yii\helpers\Url::to(['/site/logout'])?>"><i class="fa fa-user"></i> <?= Yii::$app->user->identity['username']?> (Выход)</a></li>
                                 <?php endif;?>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+<!--                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>-->
+<!--                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>-->
+<!--                                <li><a href="#" onclick="return getCart()"><i class="fa fa-shopping-cart"></i> Cart</a></li>-->
+<!--                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>-->
                             </ul>
                         </div>
                     </div>
@@ -155,7 +155,9 @@ ltAppAsset::register($this);
         </div><!--/header-bottom-->
     </header><!--/header-->
 
-    <?= $content; ?>
+    <div class="container">
+        <?= $content; ?>
+    </div>
 
     <footer id="footer"><!--Footer-->
         <div class="footer-top">
