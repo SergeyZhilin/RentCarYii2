@@ -92,6 +92,9 @@ class AutoController extends Controller
                 {
                     $model->upload();
                 }
+            unset($model->image);
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
 
             Yii::$app->session->setFlash('success', 'Транспорт успешно добавлен');
             return $this->redirect(['view', 'id' => $model->id]);
