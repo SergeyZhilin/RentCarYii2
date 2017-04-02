@@ -11,9 +11,18 @@ use yii\db\ActiveRecord;
 
 class Cart extends ActiveRecord
 {
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
 
     public function addToCart($auto, $qty = 1)
     {
+        $mainImg = $auto->getImage();
         if (isset($_SESSION['cart'][$auto->id]))
         {
             $_SESSION['cart'][$auto->id]['qty'] += $qty;
@@ -23,7 +32,7 @@ class Cart extends ActiveRecord
                 'qty' => $qty,
                 'name' => $auto->name,
                 'price' => $auto->price,
-                'img' => $auto->img
+                'img' => $mainImg->getUrl()
             ];
         }
         $_SESSION['cart.qty'] = isset($_SESSION['cart.qty']) ? $_SESSION['cart.qty'] + $qty : $qty;

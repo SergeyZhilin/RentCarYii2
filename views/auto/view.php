@@ -35,19 +35,21 @@ use yii\helpers\Html;
 
                 </div>
             </div>
+            <?php
+            $mainImg = $auto->getImage();
+            $gallery = $auto->getImages();
+            ?>
 
             <div class="col-sm-9 padding-right">
                 <div class="product-details"><!--product-details-->
                     <div class="col-sm-5">
                         <div class="view-product">
-                            <?= Html::img("@web/images/autos/{$auto->img}", ['alt' => $auto->name])?>
+                            <?= Html::img($mainImg->getUrl(), ['alt' => $auto->name])?>
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <?= $auto->content ?>
                             </div>
-                        </div>
-
-
+                    </div>
                     </div>
                     <div class="col-sm-7">
                         <div class="product-information"><!--/product-information-->
@@ -87,6 +89,7 @@ use yii\helpers\Html;
                     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <?php $count = count($hits); $i = 0; foreach ($hits as $hit): ?>
+<!--                                --><?php //$hitImg = $hit->getImage();?>
                                 <?php if ($i % 3 == 0): ?>
                             <div class="item <?php if($i == 0) echo 'active' ?>">
                                 <?php endif; ?>

@@ -55,11 +55,12 @@ use yii\helpers\Html;
                     <h2 class="title text-center">Поиск по запросу: <?= Html::encode($q) ?></h2>
                     <?php if (!empty($autos)): ?>
                         <?php foreach ($autos as $auto): ?>
+                            <?php $mainImg = $auto->getImage();?>
                             <div class="col-sm-4">
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <?= Html::img("@web/images/autos/{$auto->img}", ['alt' => $auto->name])?>
+                                            <?= Html::img($mainImg->getUrl(), ['alt' => $auto->name])?>
                                             <h2>$<?= $auto->price?></h2>
                                             <p><a href="<?= \yii\helpers\Url::to(['auto/view', 'id' => $auto->id])?>"><?= $auto->name?></a></p>
                                         </div>

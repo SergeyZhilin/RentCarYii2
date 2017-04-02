@@ -33,7 +33,7 @@ use yii\widgets\ActiveForm;
                 <tbody>
                 <?php foreach($session['cart'] as $id => $item):?>
                     <tr>
-                        <td><?= \yii\helpers\Html::img("@web/images/autos/{$item['img']}", ['alt' => $item['name'],'height' => 50]) ?></td>
+                        <td><?= \yii\helpers\Html::img($item['img'], ['alt' => $item['name'],'height' => 50]) ?></td>
                         <td><a href="<?= Url::to(['auto/view', 'id' => $id])?>"><?= $item['name']?></a></td>
                         <td><?= $item['qty']?></td>
                         <td><?= $item['price']?></td>
