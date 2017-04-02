@@ -123,10 +123,10 @@ ltAppAsset::register($this);
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
                                 <li><a href="<?= \yii\helpers\Url::to(['/admin'])?>" class="">Home</a></li>
-                                <li class="dropdown"><a href="#">Категории<i class="fa fa-angle-down"></i></a>
+                                <li class="dropdown"><a href="#">Транспорт<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="<?= \yii\helpers\Url::to(['type/index'])?>">Список категорий</a></li>
-                                        <li><a href="<?= \yii\helpers\Url::to(['type/create'])?>">Добавить категорию</a></li>
+                                        <li><a href="<?= \yii\helpers\Url::to(['type/index'])?>">Список транспорта</a></li>
+                                        <li><a href="<?= \yii\helpers\Url::to(['type/create'])?>">Добавить транспорт</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="#">Товары<i class="fa fa-angle-down"></i></a>

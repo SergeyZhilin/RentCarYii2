@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-//            'parent_id',
             [
                 'attribute' => 'parent_id',
                 'value' =>  $model->type->name ? $model->type->name : 'Независимый вид трансорта',
