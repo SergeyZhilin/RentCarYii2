@@ -22,6 +22,18 @@ use Yii;
  */
 class Auto extends \yii\db\ActiveRecord
 {
+    public $image;
+    public $gallery;
+
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
+    }
+
     /**
      * @inheritdoc
      */
@@ -46,6 +58,9 @@ class Auto extends \yii\db\ActiveRecord
             [['content', 'hit', 'new', 'sale', 'Availability'], 'string'],
             [['price'], 'number'],
             [['name', 'keywords', 'description', 'img'], 'string', 'max' => 255],
+            [['image'], 'file', 'extensions' => 'png, jpg'],
+//            [['image'], 'file', 'extensions' => 'png', 'jpg'],
+//            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4]
         ];
     }
 
@@ -62,11 +77,21 @@ class Auto extends \yii\db\ActiveRecord
             'price' => 'Цена $',
             'keywords' => 'Ключевые слова',
             'description' => 'Мета-описания',
-            'img' => 'Изображение',
+            'image' => 'Изображение',
             'hit' => 'Хит',
             'new' => 'Новинка',
             'sale' => 'Распродажа',
             'Availability' => 'Наличие',
         ];
+    }
+
+    public function upload()
+    {
+        if ($this->validate())
+        {
+            $path = 'upload/store' . $this->image->baseName . '.' . $this->image->extension;
+            $this->image->saveAs($path);
+            return true;
+        }else return false;
     }
 }

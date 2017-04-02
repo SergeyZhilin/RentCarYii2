@@ -8,6 +8,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * AutoController implements the CRUD actions for Auto model.
@@ -85,6 +86,13 @@ class AutoController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $model->image = UploadedFile::getInstance($model, 'image');
+                if ($model->image)
+                {
+                    $model->upload();
+                }
+
             Yii::$app->session->setFlash('success', 'Транспорт успешно добавлен');
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
