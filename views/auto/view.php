@@ -29,14 +29,6 @@ use yii\helpers\Html;
                         </div>
                     </div><!--/brands_products-->
 
-                    <div class="price-range"><!--price-range-->
-                        <h2>Price Range</h2>
-                        <div class="well">
-                            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                            <b>$ 0</b> <b class="pull-right">$ 600</b>
-                        </div>
-                    </div><!--/price-range-->
-
                     <div class="shipping text-center"><!--shipping-->
                         <img src="/images/home/shipping.jpg" alt="" />
                     </div><!--/shipping-->
@@ -49,7 +41,10 @@ use yii\helpers\Html;
                     <div class="col-sm-5">
                         <div class="view-product">
                             <?= Html::img("@web/images/autos/{$auto->img}", ['alt' => $auto->name])?>
-
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <?= $auto->content ?>
+                            </div>
                         </div>
 
 
@@ -77,7 +72,8 @@ use yii\helpers\Html;
                             <p><b>Availability:</b> In Rent</p>
                             <p><b>Condition:</b> New</p>
                             <p><b>Brand:</b><?= $auto->type->name ?></p>
-                            <a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+<!--                            <a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>-->
+
                         </div><!--/product-information-->
                     </div>
                 </div><!--/product-details-->
