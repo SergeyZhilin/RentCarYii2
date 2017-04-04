@@ -14,24 +14,24 @@ use yii\helpers\Html;
                         <?=  \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
                     </ul>
 
-                    <div class="brands_products"><!--brands_products-->
-                        <h2>Brands</h2>
-                        <div class="brands-name">
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-                                <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-                                <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
-                            </ul>
-                        </div>
-                    </div><!--/brands_products-->
+<!--                    <div class="brands_products"><!--brands_products-->
+<!--                        <h2>Brands</h2>-->
+<!--                        <div class="brands-name">-->
+<!--                            <ul class="nav nav-pills nav-stacked">-->
+<!--                                <li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>-->
+<!--                                <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </div><!--/brands_products-->
 
-                    <div class="shipping text-center"><!--shipping-->
-                        <img src="/images/home/shipping.jpg" alt="" />
-                    </div><!--/shipping-->
+<!--                    <div class="shipping text-center"><!--shipping-->
+<!--                        <img src="/images/home/shipping.jpg" alt="" />-->
+<!--                    </div><!--/shipping-->
 
                 </div>
             </div>
@@ -61,7 +61,6 @@ use yii\helpers\Html;
                             <?php endif; ?>
                             <h2><?= $auto->name ?></h2>
                             <p>Web ID: <?= $auto->id ?></p>
-                            <img src="/images/product-details/rating.png" alt="" />
                             <span>
 									<span>US $<?= $auto->price ?></span>
 									<label>Кол-во дней:</label>
@@ -71,8 +70,7 @@ use yii\helpers\Html;
 										Add
 									</a>
 								</span>
-                            <p><b>Availability:</b> In Rent</p>
-                            <p><b>Condition:</b> New</p>
+                            <p><b>Availability:</b> Наличие узнавайте у продавца</p>
                             <p><b>Brand:</b><?= $auto->type->name ?></p>
 <!--                            <a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>-->
 
